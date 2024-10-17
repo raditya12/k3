@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. CAR REPAIR</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"/>
+    <title>PT. SUPER PERFORMANCE</title>
+    
+    <!-- Font Awesome and Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +21,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #007bff;
+            background-color: #808080;
             padding: 15px 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -57,20 +61,70 @@
             transform: scale(1.05);
         }
         /* Company Profile styles */
-        .container {
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('img/keenan-dunn-Y0-OfYQMDlM-unsplash.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
             text-align: center;
         }
-        .container img {
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 600px;
-            height: auto;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
-        .title {
-            font-size: 48px;
-            font-weight: 700;
-            color: #333;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0;
+            color: cadetblue;
+        }
+        .hero-content h1 span {
+            color: #8bc34a;
+        }
+        .hero-content p {
+            font-size: 1.2em;
             margin: 20px 0;
         }
+        .hero-content p span {
+            color: #8bc34a;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .hero-buttons a {
+            text-decoration: none;
+            color: white;
+            background: #8bc34a;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .hero-buttons a:hover {
+            background: #7cb342;
+        }
+
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -114,16 +168,16 @@
             align-items: flex-start;
         }
         .about-content img {
-            width: 45%;
-            height: auto;
-            border-radius: 10px;
+            width: 50%;
+            height: 500px;
+            border-radius: 5px;
         }
         .about-text {
             width: 50%;
             padding-left: 20px;
         }
         .about-text button {
-            background-color: #333;
+            background-color: #333  ;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -147,8 +201,8 @@
             width: 60%;
         }
         .regulations-right {
-            width: 35%;
-            background-image: url('https://placehold.co/300x600');
+            width: 20%;
+            background-image: url('img/image-removebg-preview\ \(1\).png');
             background-size: cover;
             background-position: center;
         }
@@ -183,20 +237,23 @@
 <body>
 
     <div class="navbar">
-        <div class="logo">PT. CAR REPAIR</div>
+        <div class="logo">PT. SUPER PERFORMANCE</div>
         <ul>
             <li><a href="#regulations-container" id="active"><i class="fas fa-shield-alt"></i>Regulation </a></li>
             <li><a href="#container" id="active"><i class="fas fa-tools"></i> Safety Tool</a></li>
             <li><a href="#footer" id="active"><i class="fas fa-gavel"></i> Hukum dan Regulasi K3</a></li>
             <li><a href="#card-container" id="active"><i class="fas fa-heartbeat"></i> Kesehatan Kerja</a></li>
-            <li><a href="#denah"><i class="fas fa-map-marked-alt"></i> Denah</a></li>
+            <li><a href="#section-tittle" id ="active"><i class="fas fa-map-marked-alt"></i> Denah</a></li>
         </ul> 
     </div>  
 
-    <div class="container">
-        <img alt="A car workshop with various tools and equipment" height="400" src="https://storage.googleapis.com/a1aa/image/bZ2eIjuirD0DNajcLMcfGfautTmz0LxUFAIlJA0d4yBMPILnA.jpg" width="600"/>
-        <div class="title">PT. CAR REPAIR</div>
-        <a class="button" href="#">Profile Company</a>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Your Best Car Repair <span>Shop</span></h1>
+            <p>Buyer satisfaction is our priority <span>100% TRUSTED</span> and <span>BEST SERVICE CAR EVER</span></p>
+            <div class="hero-buttons">
+            </div>
+        </div>
     </div>
 
     <meta charset="UTF-8">
@@ -210,8 +267,8 @@
             padding: 0;
         }
         .about-container {
-            width: 80%;
-            margin: 20px auto;
+            width: 100%;
+            margin: 0;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -239,8 +296,9 @@
             text-align: center;
         }
         .about-content img {
-            max-width: 100%;
+            max-width: 20%;
             height: auto;
+            width: 1000px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
@@ -284,7 +342,7 @@
 <body>
     <div class="about-container">
         <div class="about-header">
-            <h1>About Our Company</h1>
+            <h1>About</h1>
         </div>
         <div class="about-location">
             <p>Jalan Kademangan no. 87 Kota Gresik</p>
@@ -293,8 +351,8 @@
         <div class="about-content">
             <img alt="Car Repair Shop" height="400" src="https://storage.googleapis.com/a1aa/image/OvfEALPb1WxLPyk1dYSZN9B0h6Xg5flv42UTYLUlsoDsSklTA.jpg" width="600"/>
             <div class="about-text">
-                <button>About the Company</button>
-                <p>Bengkel mobil Car Repair didirikan pada tahun 2009 dan menyediakan layanan perawatan dan perbaikan mobil seperti cuci mobil, salon mobil, ganti oli, spooring, balancing, ganti dan perbaikan ban, tune up mesin, perbaikan rem, dan penjualan suku cadang mobil. Bengkel ini memiliki dua outlet di Gresik berbagai fasilitas seperti lift cuci, ruang kering, dan mesin perbaikan.</p>
+                <h2>About the Company<h2>
+                <p>Bengkel mobil Super Performance didirikan pada tahun 2009 dan menyediakan layanan perawatan dan perbaikan mobil seperti cuci mobil, salon mobil, ganti oli, spooring, balancing, ganti dan perbaikan ban, tune up mesin, perbaikan rem, dan penjualan suku cadang mobil. Bengkel ini memiliki dua outlet di Gresik berbagai fasilitas seperti lift cuci, ruang kering, dan mesin perbaikan.</p>
             </div>
         </div>
         <div class="footer">
@@ -327,7 +385,7 @@
             </div>
         </div>
         <div class="regulations-right">
-            <img src="https://orbis-alliance.com/wp-content/uploads/2017/11/Rules-and-Regulations1.jpg" alt="Regulation Work" height="650" width="650">
+            <img src="" >
         </div>
     </div>
     <title>
@@ -587,8 +645,8 @@
                      background-color: #f4f4f4;
                  }
                  .container {
-                     width: 80%;
-                     margin: 20px auto;
+                     width: 100%;
+                     margin: 0;
                      background-color: #fff;
                      padding: 20px;
                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -634,8 +692,8 @@
             background-color: #f4f4f4;
         }
         .container {
-            width: 80%;
-            margin: 20px auto;
+            width: 100%;
+            margin: 0;
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -735,9 +793,187 @@
                 </td>
             </tr>
         </table>
-        <div class="image-container">
-            <img alt="Safety First mural with icons for personal protective equipment including hard hat, gloves, and protective glasses. The letter 'S' is added to the image." height="600" src="https://storage.googleapis.com/a1aa/image/DVJZeeXlJmjwGENPzwh6LH4Vfns2hduDMuldStkby65jCLLnA.jpg" width="800"/>
+
+    </div>
+   <!-- Tulisan Denah di atas gambar pertama -->
+<!-- Bagian Denah -->
+<div class="section" id="sec">
+    <h3 class="section-title">Denah</h3>
+    <img src="img/1.png" class="image denah-image" alt="Denah" />
+</div>
+
+<!-- Bagian Resiko Bahaya -->
+<div class="section">
+    <h3 class="section-title">Resiko Bahaya</h3>
+    <img src="img/2.png" class="image resiko-image" alt="Resiko Bahaya" />
+</div>
+
+<br>
+
+<style>
+/* Gaya untuk section */
+.section {
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+/* Gaya untuk judul (h3) */
+.section-title {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Gaya untuk gambar */
+.image {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover pada gambar */
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Spesifik gambar untuk denah */
+.denah-image {
+    margin-right: 20px;
+}
+
+/* Menyesuaikan ukuran gambar untuk bagian resiko */
+.resiko-image {
+    max-width: 700px;
+    height: auto;
+}
+</style>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <!-- Link Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .about-section {
+            background-color: #808080;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .about-section h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .contact-section {
+            padding: 30px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .contact-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info div {
+            font-size: 18px;
+        }
+
+        .contact-info i {
+            color: #282c34;
+            margin-right: 8px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #282c34;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #E4405F; /* Warna merah muda khas Instagram */
+        }
+
+        footer {
+            background-color: #282c34;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Menyediakan pelayanan terbaik, Tengutamakan kepuasaan pelanggan, Terpercaya sejak 2020.</p>
+    </div>
+
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Address:</strong><br>
+                Jalan Kademangan no. 87 Kota Gresik<br>
+                Gresik, Indonesia
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                <strong>Email:</strong><br>
+                superperformance@company.com
+            </div>
+        </div>
+
+        <h2></h2>
+        <div>
+            <i class="fas fa-phone-alt"></i>
+            <strong>Phone:</strong><br>
+            +62 812 3456 7890
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2020 Your Company. All Rights Reserved.</p>
+    </footer>
+    
 </body>
 </html>
